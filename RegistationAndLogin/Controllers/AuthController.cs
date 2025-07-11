@@ -80,7 +80,7 @@ namespace RegistationAndLogin.Controllers
                 {
                     return Unauthorized("User Id not found in token or does not match");
                 }
-                
+
                 var updatedUser = await _authService.UpdateUserAsync(userId, userUpdateDto);
                 return Ok(updatedUser);
             }
